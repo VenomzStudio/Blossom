@@ -1,0 +1,229 @@
+@font-face{
+    font-family: 'Channel';
+    src: url('fonts/Channel_Left-Slanted.eot'); /* here you go, IE */
+}
+@font-face{
+    font-family: 'Channel';
+    src: url('fonts/Channel_Left-Slanted.otf'); /* everyone else take this */
+}
+
+@font-face{
+    font-family: Daniel;
+    src: url(fonts/Daniel.otf);
+}
+html, body {
+    min-height: 100%;
+}
+body { 
+    position: relative;
+    background: url(images/bg1.jpg) fixed 100%;
+    background-size: 100%;
+    margin:0;
+    padding:0; 
+}
+ 
+/* Make Header Sticky */
+#header_container { 
+    position:fixed; 
+    width:100%; 
+    min-width: 800px;
+    top:0; 
+}
+
+#wstazka {
+    position: absolute;
+    z-index: 2;
+    background: url(images/wstazka.png) repeat-x;
+    width: 100%;
+    height: 58px;
+}
+
+#wstazka .tresc {
+    width: 900px;
+    margin: 0 auto;
+    color: white;
+    padding-top: 12px;
+    font-family: Daniel;
+}
+
+#wstazka .tresc .lewa {
+    position: absolute;
+    text-align: left;
+}
+#wstazka .tresc .lewa .fb-icon {
+    position: absolute;
+    vertical-align:  middle;
+}
+
+#wstazka a {
+    text-decoration: none;
+}
+#wstazka a.bezKoloru {
+    color: #ffffff;
+}
+
+.fb-text {
+    padding: 4px 0px 0px 30px;
+}
+
+#wstazka .tresc .prawa {
+    text-align: right;
+    right: 0;
+}
+
+#header-box {
+    position: absolute;
+    z-index: 1;
+    background: url(images/header.png) no-repeat;
+    //line-height:60px;
+    height: 166px;
+    width: 1656px;
+    left:50%;
+    margin-left:-828px;
+    margin-top: 30px; 
+    text-align: center;
+    z-index: 1;
+}
+
+#header-box .tresc {
+    //padding-top:30px;
+}
+
+#logo {
+    position: absolute;
+    padding-top: 12px;
+    margin-left: -164px;
+}
+#menu {
+    font-family: Channel;
+    padding-top: 25px;
+}
+
+#menu li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 50px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #404040;
+}
+
+#menu li a:hover {
+    color: #9ebe11;
+}
+
+#container {
+    position: absolute;
+    top: 350px;
+    left: 0;
+    background: url(images/owal.png) center top;
+   // background-position: center top, 0px -200px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding-bottom: 110px;
+    width: 100%;
+}
+#container:after {
+    content: "";
+    background: #fffef6;
+    display: block;
+    height: 50px;
+}
+
+#container_bg {
+    margin-top: 13px;
+    background: #fffef6 center top;
+
+}
+
+#box {
+    background: url(images/content-bg2.jpg) repeat-y;
+    width: 945px;
+    margin: 0 auto;
+    padding-top: 0px;
+}
+
+#box:before {
+    content: "";
+    display: block;
+    height: 29px;
+    background: url(images/content-bg-top2.jpg) repeat-y 0px 0px;
+}
+
+#box:after {
+    content: "";
+    display: block;
+    height: 29px;
+    background: url(images/content-bg-bottom2.jpg) repeat-y 0px 0px;
+}
+
+#tresc {
+    width: 850px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Channel;
+    font-size: 16px;
+    color: #404040;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 90px;
+}
+ 
+/* Make Footer Sticky */
+#footer_container { 
+    // background: #200b1b url(images/szew.jpg) repeat-x; 
+    bottom:0; 
+    height:110px; 
+    left:0; 
+    position:fixed; 
+    width:100%; 
+}
+
+.szew {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #200b1b;
+    background-image: linear-gradient(to right, #ece4a5 0%, #ece4a5 35px, transparent 0px);
+    background-position: 0px 10px;
+    background-size: 70px 1px;
+    background-repeat: repeat-x;
+}
+
+#footer {
+    font-family: Arial;
+    font-size: 12px;
+    margin:0 auto; 
+    padding-top: 30px;
+    width:900px; 
+    text-align:center; 
+}
+
+#footer table {
+    width: 100%;
+    color: #b0b0b0;
+}
+
+#footer table .lewa {
+    width: 20%;
+    text-align: left;
+}
+
+#footer table .srodek {
+    width: 60%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    color: #9ebe11;
+}
+
+#footer table .prawa {
+    width: 20%;
+    text-align: right;
+}
