@@ -1,3 +1,9 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+_just_numbers:
+    path:   /lucky/number/{count}
+    defaults: { "count": 1, _controller: AppBundle:Lucky:number }
+_json_numbers:
+    path:   /api/lucky/number/{count}
+    defaults: { "count": 1, _controller: AppBundle:Lucky:apiNumber }

@@ -2,12 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Lucky numbers{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="sidebar">
+            {% block sidebar %}
+                <h3>Generate lucky numbers:</h3>
+                <ul>
+                    <li><a href="{{ path('_just_numbers', {'count': luckyNumbersCount}) }}">Just</a></li>
+                    <li><a href="{{ path('_json_numbers', {'count': luckyNumbersCount}) }}" target="_blank">JSON Format</a></li>
+                </ul>
+            {% endblock %}
+        </div>
+
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
