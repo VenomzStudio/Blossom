@@ -1,0 +1,60 @@
+@mixin dashed-border($dashlength, $spacelength, $borderwidth, $color, $position: top) {
+  $per: percentage($dashlength / ($dashlength + $spacelength));
+  background-image: linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per);
+  background-position: 0 $position; 
+  background-size: ($dashlength + $spacelength) $borderwidth;
+  background-repeat: repeat-x;
+}
+
+.dashed-borders {
+  background: #1d4a91; 
+}
+.dashed-borders:before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin-top: 40px;
+  
+  background-color: #2356a1;
+  @include dashed-border(11px, 6px, 2px, #0a2463);
+  
+  border-bottom: 2px solid #091f5c;
+  box-shadow: 0 7px 0 0 #183f84;
+}
+.dashed-borders:after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin-bottom: 40px;
+  
+  background-color: #2356a1;
+  @include dashed-border(11px, 6px, 2px, #0a2463, bottom);
+  
+  border-top: 2px solid #091f5c;
+  box-shadow: 0 -7px 0 0 #183f84;
+}
+
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  
+  background: #2356a1;
+}
+
+p {
+  font-family: Pacifico, cursive;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 40px;
+  color: #fff;
+  line-height: 1.2;
+}
